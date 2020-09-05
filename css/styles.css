@@ -1,0 +1,221 @@
+/* L63 goes through the coding ideas and some changes were made */
+
+body {
+    color: #40514E;
+    margin: 0;
+    text-align: center;
+    /* L53: most serif fonts are Times, most sans-serifs are Arial */
+    /* websafe fonts give the maximum chance getting the webpage rendered correctly... */
+    /* BUT, this is not 100% */
+    font-family: 'Merriweather', serif;
+}
+/* L56 */
+/* IMPORTANT */
+/*  */
+/* 16px = 100% = 1em */
+/*  */
+/* % and em can be dynamically sized on browsers */
+/* px are static sizes */
+/*  */
+/* NOTE 1: the child can inherit a font-size, in % or em only, from a parent if present */
+/*  */
+/* NOTE 2: if rem (root em) is used, then child does not inherit font size if present in parent, hence easier to DEBUG!! */
+/*  */
+/*  */
+h1 {   
+    margin: 50px auto 0 auto;
+    font-family: 'Sacramento', cursive;
+    font-size: 5.625rem;
+    color: #66BFBF;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: #66BFBF;
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #11999E;
+}
+
+
+p {
+    line-height: 2;
+}
+
+hr {
+    border: dotted lightgray 6px;
+    border-bottom: none;
+    /* using percentages helps with scaling/responsiveness */
+    width: 4%;
+    margin: 100px auto;
+}
+
+/* link buttons in bottom container */
+a {
+    color: #11999E;
+    font-family: 'Montserrat', sans-serif;
+    /* sets a gap between the buttons */
+    margin: 10px 20px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #eaf6f6;
+    transition-duration: 1s;
+}
+
+
+
+/* targetting the p tag inside .bottom-container... */
+ .bottom-container p {
+    color: #eaf6f6;
+    font-size: 0.75rem;
+    padding: 20px 0;
+} 
+
+/* ...this can also be achied by targetting the class 'copyright' given to the p tag as follows (L63) */
+
+/* .copyright {
+     color: #eaf6f6;
+    font-size: 0.75rem;
+} */
+
+/* targets p tag inside profile */
+.intro {
+    width: 30%;
+    /* margin between text and hr */
+    margin: 0 auto;
+}
+
+
+.contact-message {
+    width: 40%;
+    margin: 40px auto 60px;
+}
+
+
+/* the parent of both clouds!! */
+.top-container {
+    background-color: #e4f9f5;
+    position: relative;
+    padding-top: 100px;
+}
+
+.middle-container {
+    margin: 100px 0;
+}
+
+.bottom-container {
+background-color: #66BFBF;
+padding: 50px 0 20px;
+}
+
+/* poisiton of each cloud is relative to its parent 'top-container' */
+.bottom-cloud {
+    position: absolute;
+    left:250px;
+    bottom: 300px;
+}
+
+.top-cloud {
+    position: absolute;
+    right: 300px;
+    top: 40px;
+} 
+
+.skill-row {
+    width: 50%;
+    margin: 100px auto 100px auto;
+    text-align: left;
+}
+
+
+/* float positions the image in a way to allow the text to wrap around it */
+.bluelaptop-img {
+    width: 15%;
+    float: left;
+    margin-right: 30px;
+}
+
+.poolballs-img {
+    width: 15%;
+    float: right;
+    margin-left: 30px;
+}
+
+/* L61: clears margin to left, allows text to position below image  */
+/* NOTE: should only be used for wrapping text not positioning for which ABSOLUTE, RELATIVE, STATIC should be used */
+/* .webdev-description {
+    clear: left;
+} */
+
+/* clears margin to right, allows text to position below image  */
+/* .snooker-description {
+    clear: right;
+} */
+
+
+/* from css3.buttongenerator.com */
+
+.btn {
+  background: #11cdd4;
+  background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
+  background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
+  background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
+  background-image: -o-linear-gradient(top, #11cdd4, #11999e);
+  background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #30e3cb;
+  background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+  text-decoration: none;
+}
+
+
+
+
+/* from bestcssbuttongenerator.com */
+/*  */
+/*  */
+
+/* 
+.myButton {
+	background:linear-gradient(to bottom, #65d4c5 5%, #408c99 100%);
+	background-color:#65d4c5;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:20px;
+	padding:12px 24px;
+	text-decoration:none;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #65d4c5 100%);
+	background-color:#408c99;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+} */
+
+
